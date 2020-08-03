@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+        <script src="./webcam.js"></script>
+        <script src="./rps-dataset.js"></script>
+    </head>
+    <body>
+        <div>
+            <div>
+                <video muted autoplay playsinline id="wc" width="224" height="224"></video>
+            </div>
+        </div>
+        <button type="button" id="0" onclick="handleBtn(this)">Pranjal</button>
+        <button type="button" id="1" onclick="handleBtn(this)">Samman</button>
+        <button type="button" id="2" onclick="handleBtn(this)">Shantonu</button>
+
+        <div id="rock">Pranjal: </div>
+        <div id="paper">Samman: </div>
+        <div id="scissor">Shantonu: </div>
+
+        <button type="button" id="train" onclick="doTraining()">Train</button>
+
+        <button type="button" id="start" onclick="trigger(true)">Start</button>
+        <button type="button" id="stop" onclick="trigger(false)">Stop</button>
+
+        <div id="pred"></div>
+    </body>
+    <script src="index.js"></script>
+</html>
